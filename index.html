@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Gabriel Cazzullo</title>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+    <!--H E A D E R-->
+    <header class="header">
+        <div class="container">
+            <figure class="logo">
+                <img src="./assets/images/logo.png" alt="Logo oficial"><!--Logo-->
+            </figure>
+            <nav class="menu">
+                <ul class="menu__container">
+                    <li class="item__menu">
+                        <a href="#projects">Mis proyectos</a>
+                    </li>
+                    <li class="item__menu">
+                        <a href="#experience">Experiencia</a>
+                    </li>
+                    <li class="item__menu">
+                        <a href="#skills">Habilidades</a>
+                    </li>
+                    <li class="item__menu">
+                        <a href="#footer">Trabajemos juntos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--E N D   H E A D E R-->
+    <!--M A I N-->
+    <main class="hero">
+        <div class="container">
+            <h1 class="hero__title">
+                Soy Luis Cazzullo, <strong>Frontend Developer</strong>
+                especializado en <strong>ReactJS</strong>
+            </h1>
+            <img class="hero__image" src="./assets/images/hero_image.jpeg" alt="Hero image">
+        </div>
+    </main>
+    <!--E N D   M A I N-->
+    <div class="container">
+        <!--P R O J E C T S-->
+        <section class="projects" id="projects">
+            <h2>Mis Proyectos</h2>
+            <article class="project">
+                <div class="project__details">
+                    <h3 class="project__title">Rolling Shop</h3>
+                    <h6 class="project__features">Vanilla JS / Bootstrap</h6>
+                    <p class="project__date"><small><strong>Fecha</strong>: 01/11/2019</small></p>
+                    <p class="project__link"><small><strong>Puedes verlo en</strong>: <a href="https://github.com/matias89/rc-shop-com-8">Ver repositorio</a></small></p>
+                    <p class="project__description">Rolling Shop fue un proyecto de clases para Rolling Code. Usamos JavaScript Vanilla para manejar la interactividad del sitio. Aprendimos a manipular el Local Storage y a trabajar con Closures. Para los estilos usamos Bootstrap</p>
+                </div>
+                <figure class="project__image__container">
+                    <img class="project__image" src="./assets/images/ecommerce.png" alt="Ecommerce">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project__details">
+                    <h3 class="project__title">Rolling News</h3>
+                    <h6 class="project__features">React JS / Vanilla JavaScript</h6>
+                    <p class="project__date"><small><strong>Fecha</strong>: 01/02/2020</small></p>
+                    <p class="project__link"><small><strong>Puedes verlo en</strong>: <a href="https://github.com/matias89/rolling-news">Ver repositorio</a></small></p>
+                    <p class="project__description">Rolling Shop fue un proyecto de clases para Rolling Code School. Aprendimos a usar la popular librería de JavaScript: React. Usamos React Router para manejar las rutas del proyecto y  a usar métodos para transferir datos como POST y GET.</p>
+                </div>
+                <figure class="project__image__container">
+                    <img class="project__image" src="./assets/images/news_site.png" alt="Ecommerce">
+                </figure>
+            </article>
+        </section>
+        <!--E N D   P R O J E C T S-->
+        <!--E X P E R I E N C E-->
+        <section class="experience" id="experience">
+            <h2>Más sobre mi experiencia</h2>
+            <div class="jobs__container">
+                <article class="job">
+                    <figure class="job__image__container">
+                        <img class="job__image" src="./assets/images/rolling-code.png" alt=""><!--Logo Fortino-->
+                    </figure>
+                    <div class="job__details">
+                        <h3 class="job__title">Rolling Code Studio (Actualidad)</h3>
+                        <p class="job__description">Actualmente soy Frontend Developer. Trabajo como desarrollador de aplicaciones móviles para Banco Colombia, Western Union y Banco da Vivenda. Realicé trabajos de testing, diseño UI. Nuestra principal tecnología fue Outsystems.</p>
+                    </div>
+                </article>
+                <article class="job">
+                    <figure class="job__image__container">
+                        <img class="job__image" src="./assets/images/fortino-logo.png" alt=""><!--Logo Fortino-->
+                    </figure>
+                    <div class="job__details">
+                    <h3 class="job__title">Fortunato Fortino SRL (2018-2020)</h3>
+                    <p class="job__description">Trabajé como Digital Marketer Jr. Me encargaba de administrar los ecommerce, diseños para Adwords y maquetación de Landing Pages</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!--E N D   E X P E R I E N C E-->
+    </div>
+    <!--C O N T A C T-->
+    <section class="contact">
+        <div class="container">
+            <form class="form__email">
+                <h3>¿Creamos algo juntos?</h3>
+                <input type="email" placeholder="Déjame tu email" value="@gmail.com">
+                <button>Enviar</button>
+            </form>
+            <div class="social">
+                <a href="https://twitter.com/CazzulloLuis" class="social__link twitter"></a>
+                <a href="https://www.instagram.com/luiscazzullo/" class="social__link instagram"></a>
+                <a href="https://github.com/luiscazzullo" class="social__link github"></a>
+                <a href="https://www.linkedin.com/in/luiscazzullo/" class="social__link linkedin"></a>
+            </div>
+        </div>
+    </section>
+    <!--E N D   C O N T A C T-->
+    <!--F O O T E R-->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div>
+                <p>Todos los derechos reservados a Luis Gabriel Cazzullo</p>
+            </div>
+            <div>
+                <p>Curso de Desarrollo Web Online de Platzi</p>
+            </div>
+        </div>
+    </footer>
+    <!--E N D   F O O T E R-->
+</body>
+</html>
