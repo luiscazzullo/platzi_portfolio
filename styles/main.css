@@ -3,6 +3,39 @@
     Red: #FF2558
     Blue: #111D5E
 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../assets/fonts/icomoon.eot?tc7q2y');
+    src:  url('../assets/fonts/icomoon.eot?tc7q2y#iefix') format('embedded-opentype'),
+      url('../assets/fonts/icomoon.ttf?tc7q2y') format('truetype'),
+      url('../assets/fonts/icomoon.woff?tc7q2y') format('woff'),
+      url('../assets/fonts/icomoon.svg?tc7q2y#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+  
+
+
 /********************Generals*/
 :root {
     --green-color: #2DAD67;
@@ -23,10 +56,12 @@ body {
 
 .container {
     display: inherit;
+    flex-wrap: inherit;
+    flex: 1;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -64,9 +99,25 @@ h2 {
 .header {
     background: var(--red-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 80px;
+}
+
+.burger-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, .2);
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    left: 5px;
+    top: 5px;
+    color: var(--blue-color);
 }
 
 .logo {
@@ -90,12 +141,6 @@ h2 {
 .item__menu {
     margin: 0 10px;
     color: var(--blue-color);
-}
-
-.item__menu:nth-child(4){
-    border: 1px solid var(--blue-color);
-    border-radius: 4px;
-    padding: 10px;
 }
 
 .item__menu:hover {
@@ -136,6 +181,7 @@ h2 {
     border: 1px solid gray;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
@@ -144,7 +190,7 @@ h2 {
 }
 
 .project__details {
-    width: 500px;
+    width: 50%;
 }
 
 .project__title {
@@ -167,11 +213,11 @@ h2 {
 }
 
 .project__image__container {
-    width: 400px;
+    width: 50%;
 }
 
 .project__image__container img {
-    width: 100%;
+    max-width: 100%;
 }
 
 /********************Experience*/
@@ -186,7 +232,7 @@ h2 {
     border-radius: 10px;
     margin: 10px;
     overflow: hidden;
-    width: 480px;
+    width: 50%;
 }
 
 .job__details {
@@ -210,6 +256,7 @@ h2 {
     background: var(--blue-color);
     color: var(--white-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 150px;
@@ -244,6 +291,7 @@ h2 {
 
 .social {
     display: flex;
+    justify-content: center;
 }
 
 .social__link {
@@ -277,6 +325,191 @@ h2 {
 .footer {
     background: var(--red-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
+}
+
+/********************Responsive*/
+
+@media screen and (max-width: 1024px) {
+
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    .hero__image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        padding: 0 1em;
+    }
+
+    .header {
+        display: block;
+        height: auto;
+    }
+
+    .burger-button {
+        display: block;
+    }
+
+    .header .logo {
+        margin: 0 auto;
+    }
+
+    .header ul {
+        display: block;
+        height: auto;
+    }
+
+    .header ul li {
+        height: 50px;
+        text-align: center;
+    }
+
+    .header ul li a {
+        color: white;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: 1em;
+    }
+
+    .menu {
+        position: fixed;
+        background: rgba(17, 29, 94, .85);
+        z-index: 9998;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-Active {
+        left: 0;
+    }
+
+    .project {
+        display: block;
+    }
+
+    .project__image__container {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .project__details {
+        width: auto;
+        font-size: 16px;
+    }
+
+    .project__title {
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project__link {
+        font-size: 1em;
+    }
+
+    .project__features {
+        font-size: .7em;
+    }
+
+    .project__description {
+        font-size: 1em;
+    }
+
+    .project__features,
+    .project__date,
+    .project__link {
+        margin: .3em 0;
+    }
+
+    .jobs__container {
+        flex-wrap: wrap;
+    }
+
+    .job {
+        width: auto;
+    }
+
+    .job__image {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .project__details {
+        font-size: 14px;
+    }
+    
+    .job__details {
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
+    .contact {
+        display: block;
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+    }
+
+    .contact h3 {
+        margin-top: 0;
+    }
+
+    .contact button {
+        margin: 1em auto;
+    }
+
+    .footer {
+        border: 1px solid transparent;
+        display: block;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 320px) {
+
+    .hero h1 {
+        font-size: 1.2em;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+
 }
